@@ -1,0 +1,90 @@
+/* styles.css */
+
+.government-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+  
+  section {
+    background-color: #f7f7f7;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 1em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #23527c;
+  }
+  
+  button:active {
+    background-color: #337ab7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+  }
+  
+  #licence-to-approve {
+    background-color: #f7f7f7;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #approved-licences {
+    background-color: #dff0d8;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #rejected-licences {
+    background-color: #f2dede;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }

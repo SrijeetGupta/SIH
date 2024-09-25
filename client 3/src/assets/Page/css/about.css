@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.rectangle-1 {
+    height: 45vh;
+    background-color: #F4F5F6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.txt-1 {
+    font-family: 'DM Sans';
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}
+
+.txt-2 {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+}
+
+.data-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.p_name {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.text-1 {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+}
+
+.text-2 {
+    font-family: 'DM Sans';
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+}
+
+.bigcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80vw;
+    gap: 30px;
+}
+
+.smallcontainer {
+    display: flex;
+    margin: auto;
+    gap: 40px;
+}
+
+.usercard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #B1B5C3;
+    border-radius: 20px;
+}
+
+.usercard > svg {
+    background-color: #B1B5C3;
+    border-radius: 20px;
+}
+
+.name {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #141416;
+}
+
+.details {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #141416;
+}

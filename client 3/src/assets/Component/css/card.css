@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.card {
+    width: 90vw;
+    height: 30vh;
+    background-color: #FFFFFF;
+    margin: auto;
+    border: 0.5px solid #B1B5C3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.txt-1 {
+    color: #182135;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+
+.txt-2 {
+    font-family: 'Poppins';
+    font-size: 24px;
+    color: #182135;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+}
+
+.txt-3 {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000000;
+    text-align: left;
+}
+
+.txt-4 {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: left;
+    color: #000000;
+}
+
+.last-line {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.btn {
+    background-color: #353945;
+    padding: 10px;
+    border: 0.5px solid #B1B5C3;
+    border-radius: 20px;
+}
+
+.btn span {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #FFFFFF;
+}
