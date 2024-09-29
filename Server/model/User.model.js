@@ -5,6 +5,10 @@ import jwt from 'jsonwebtoken'
 
 
 const UserSchema=mongoose.Schema({
+    userlogo: {
+        type: String,
+        require: true
+    },
     name:{
         type:String,
         require:true

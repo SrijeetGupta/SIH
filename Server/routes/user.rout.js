@@ -6,14 +6,11 @@ import { verifyUser } from "../middleware/user.auth.middleware.js";
 
 const router=Router()
 
-
-router.route('/getuser').get(verifyUser,getUser);
+router.route('/creatuser').post(createUser);
 
 router.route('/loginuser').post(loginUser);
 
-router.route('/creatuser').post(createUser);
-
-router.route("/deletuser").post(verifyUser,deleteUser);
+router.route('/getuser').get(verifyUser,getUser);
 
 router.route("/applytojob").post(verifyUser,applyToJob);
 

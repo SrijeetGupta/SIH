@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken'
-const GovernmentSchema = mongoose.Schema({
-    governmentName: {
+const GovermentSchema = mongoose.Schema({
+    govermentName: {
         type: String,
         required: true
     },
@@ -23,18 +23,12 @@ const GovernmentSchema = mongoose.Schema({
             type: String
         }
     ],
-    licenceToApprove: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Company" // Corrected reference
-        }
-    ],
-    licenceApproved: [
-        { 
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Company" // Corrected reference
-        }
-    ]
+    licenced: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Licence,
+        require: false
+    }]
+   
 },{timestamps: true});
 
 GovernmentSchema.pre("save", async function(next) {
@@ -58,6 +52,6 @@ GovernmentSchema.methods.generateRefreshtoken = async function(){
     )
 }
 
-const Government = mongoose.model('Government', GovernmentSchema);
+const Goverment = mongoose.model('Goverment', GovernmentSchema);
 
-export default Government;
+export default Goverment;

@@ -20,8 +20,6 @@ router.route(upload.fields([
 ]),'/creatcompany').post(creatcompany);
 
 
-router.route("/deletcompany").post(verifyCompany,deletcompany);
-
 router.route("/postjob").post(verifyCompany,postjob);
 
 
