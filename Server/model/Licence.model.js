@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-
-import Company from "./Company.model";
-import Goverment from "./Goverment.model";
+import Company from "./Company.model.js";
+import Goverment from "./Goverment.model.js";
 
 
 
@@ -10,16 +9,16 @@ const LicenceSchema=mongoose.Schema({
         type:String,
         require:true
     },
-    company:[{
+    company:{
         type: mongoose.Schema.Types.ObjectId,
-        ref:Company,
+        ref: "Company",
         require:true
-    }],
-    goverment:[{
+    },
+    goverment:{
         type: mongoose.Schema.Types.ObjectId,
-        ref:Goverment,
+        ref:"Goverment",
         require:true
-    }],
+    },
     status:{
         type:String,
         enum:['In progress',"Accepted","Rejected"],

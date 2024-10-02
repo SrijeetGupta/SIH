@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
+import Licence from "./Licence.model.js";
 const GovermentSchema = mongoose.Schema({
     govermentName: {
         type: String,
@@ -25,23 +26,23 @@ const GovermentSchema = mongoose.Schema({
     ],
     licenced: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: Licence,
+        ref: "Licence",
         require: false
     }]
    
 },{timestamps: true});
 
-GovernmentSchema.pre("save", async function(next) {
+GovermentSchema.pre("save", async function(next) {
     if (!this.isModified("password")) return next();
     this.password = await bcrypt.hash(this.password, 10);
     next();
 });
 
-GovernmentSchema.methods.isPasswordCorrect = async function(password) {
+GovermentSchema.methods.isPasswordCorrect = async function(password) {
     return await bcrypt.compare(password, this.password);
 };
 
-GovernmentSchema.methods.generateRefreshtoken = async function(){
+GovermentSchema.methods.generateRefreshtoken = async function(){
     return jwt.sign({
         _id:this._id,
         
@@ -52,6 +53,6 @@ GovernmentSchema.methods.generateRefreshtoken = async function(){
     )
 }
 
-const Goverment = mongoose.model('Goverment', GovernmentSchema);
+const Goverment = mongoose.model('Goverment', GovermentSchema);
 
 export default Goverment;

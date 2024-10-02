@@ -37,6 +37,8 @@ const loginUser = AsyncHandler(async (req, res) => {
     .json({ msg: "User logged in successfully" });
 });
 
+
+
 const createUser = AsyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -50,17 +52,34 @@ const createUser = AsyncHandler(async (req, res) => {
     throw new ApiError(400, "User already exists");
   }
 
+  const img_1path = req.files?.img[0]?.path;
+
+    if (!img_1path) {
+
+      throw new ApiError(400, "company logo ang background are required")
+
+    }
+    else {
+
+      const profile = await uploadOnCloudinary(img_1path);
+     
   const user = await User.create({
+    profile,
     name,
     email,
     password,
-  });
+  })
 
   return res.status(200).json({
     msg: "User created successfully",
     user,
   });
+}
 });
+
+
+
+
 
 const deleteUser = AsyncHandler(async (req, res) => {
   const result = await User.deleteOne({ _id: req.user._id });

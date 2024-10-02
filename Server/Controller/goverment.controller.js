@@ -15,54 +15,56 @@ const getgov=AsyncHandler((req,res)=>{
 
 
 })
+//to do
 
 const Approvelicence=AsyncHandler((req,res)=>{
-    const{licenceToApprove}=req.body
-    if(!licenceToApprove){
-        throw new ApiError(400,"company id not found")
-    }
-    else{
-        const comp=Company.findById(licenceToApprove)
-        if(!comp){
-            throw new ApiError(400,"company not found")
-        }
-        else{
-            const isdone1= Company.findOneAndUpdate( {_id:licenceToApprove}, {licencedBy:req.gov.govermentname} )
-            if(isdone1){
-                return res.status(200).json({
-                    "msg":"licence approved successfully"
-                })
-            }
-        }
-    }
+    // const{licenceToApprove}=req.body
+    // if(!licenceToApprove){
+    //     throw new ApiError(400,"company id not found")
+    // }
+    // else{
+    //     const comp=Company.findById(licenceToApprove)
+    //     if(!comp){
+    //         throw new ApiError(400,"company not found")
+    //     }
+    //     else{
+    //         const isdone1= Company.findOneAndUpdate( {_id:licenceToApprove}, {licencedBy:req.gov.govermentname} )
+    //         if(isdone1){
+    //             return res.status(200).json({
+    //                 "msg":"licence approved successfully"
+    //             })
+    //         }
+    //     }
+    // }
 })
 
+//to do
 const Rejectlicence=AsyncHandler((req,res)=>{
-    const{licenceToApprove}=req.body
-    if(!licenceToApprove){
-        throw new ApiError(400,"company id not found")
-    }
-    else{
-        const comp=Company.findById(licenceToApprove)
-        if(!comp){
-            throw new ApiError(400,"company not found")
-        }
-        else{
-            const isdone1= Company.findOneAndUpdate( {_id:licenceToApprove}, {licencedBy:"licence got rejected"} )
-            const ltoApprove=req.gov.licenceToApprove.remove(licenceToApprove)
-            const govId=req.gov._id
-            const isdone2=Goverment.findOneAndUpdate({_id:govId},{licenceToApprove:ltoApprove})
-            if(isdone1){
-               return res.status(200).json({
-                    "msg":"licence approved successfully"
-                })
-            }
-        }
-    }
+    // const{licenceToApprove}=req.body
+    // if(!licenceToApprove){
+    //     throw new ApiError(400,"company id not found")
+    // }
+    // else{
+    //     const comp=Company.findById(licenceToApprove)
+    //     if(!comp){
+    //         throw new ApiError(400,"company not found")
+    //     }
+    //     else{
+    //         const isdone1= Company.findOneAndUpdate( {_id:licenceToApprove}, {licencedBy:"licence got rejected"} )
+    //         const ltoApprove=req.gov.licenceToApprove.remove(licenceToApprove)
+    //         const govId=req.gov._id
+    //         const isdone2=Goverment.findOneAndUpdate({_id:govId},{licenceToApprove:ltoApprove})
+    //         if(isdone1){
+    //            return res.status(200).json({
+    //                 "msg":"licence approved successfully"
+    //             })
+    //         }
+    //     }
+    // }
 })
 
 
-//new
+
 const creatgoverment= AsyncHandler(async(req,res)=>{
     const {name,email,password} =req.body
     if(!(name&&email&&password)){

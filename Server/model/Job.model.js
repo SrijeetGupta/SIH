@@ -1,7 +1,14 @@
 import mongoose from "mongoose";
 import Company from "./Company.model.js";
 
-
+/**
+ * jobApplyed
+ * jobTitle
+ * jobDescription
+ * applyLink
+ * location
+ * salary
+ */
 const JobSchema=mongoose.Schema({
 
     jobApplyed:{
@@ -18,6 +25,14 @@ const JobSchema=mongoose.Schema({
         require:true
     },
     applyLink:{
+        type:String,
+        require:true
+    },
+    location:{
+        type:String,
+        require:true
+    }, 
+    salary:{
         type:String,
         require:true
     }

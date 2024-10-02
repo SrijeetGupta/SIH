@@ -4,7 +4,7 @@ import { upload } from "../middleware/multer.middlewares.js";
 
 
 
-import {creatcompany,deletcompany,getcompany,getlicence,postjob,logincompany} from '../Controller/company.controller.js'
+import {creatcompany,getcompany,getlicence,postjob,logincompany} from '../Controller/company.controller.js'
 import { verifyCompany } from "../middleware/company.auth.js";
 
 const router=Router()

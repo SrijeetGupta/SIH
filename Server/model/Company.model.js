@@ -5,14 +5,14 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 /** 
- * companylogo
- * companbg
- * companyname
- * email
- * password
- * jwtToken
- * licenced
- * job
+ * companylogo-r
+ * companbg-r
+ * companyname-r
+ * website-r
+ * email-r
+ * password-r
+ * licenced-v
+ * job-v
 */
 
 const CompanySchema = mongoose.Schema({
@@ -52,7 +52,7 @@ const CompanySchema = mongoose.Schema({
     }],
     job: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: Job,
+        ref: "Job",
         require: false
     }]
 
